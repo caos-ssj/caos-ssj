@@ -1,16 +1,19 @@
-### Brayner Jaime · AI QA & Automation Engineer · Colombia (UTC-5)
+### Brayner Jaime · AI Automation & QA Engineer
 
-I build LLM agents and automations, and I measure whether they can be trusted before they ship: baselines first, acceptance thresholds, human review for the hard cases, and a regression gate so nothing gets worse silently.
+I design and build AI automation systems, and I test them until I can say how far they can be trusted. My work covers the whole path: the workflow or agent, the rules that limit what it can do, the tests and evaluations that measure it, and the review step where a person decides.
 
-| Project | What it shows | Measured |
+**How I work.** I measure a simple baseline before trusting an agent, set acceptance thresholds before running anything, send uncertain cases to human review, and keep a regression gate so nothing gets worse without notice.
+
+**CAOS** is my AI research lab and studio. The lab side measures models and agents on real tasks and publishes the results, including the ones that went against my expectations. The studio side turns what holds up into working systems: n8n workflows, agents over MCP and the tooling to run them.
+
+| Project | What it is | Highlight |
 |---|---|---|
-| [caos-agent-harness](https://gitlab.com/braynerssj26/caos-agent-harness) | The harness I run my agents with: task board with atomic claims, policy guard, router by cost of error, memory over MCP, two engines (own loop and LangGraph), human review and traces | 133 tests; 26/26 injected faults caught by the test suite; the router sends critical tasks to a person because no measured system reaches the threshold |
-| [agent-mcp-harness](https://gitlab.com/braynerssj26/agent-mcp-harness) | Unattended agent over MCP: tool guard, budgets, citations checked against tool output | 3B model 8/20 vs 18/20 for plain retrieval; the threshold took out-of-scope abstention from 2/4 to 4/4 |
-| [ai-validation-harness](https://gitlab.com/braynerssj26/ai-validation-harness) | Validation bench: golden data, retries, review queue, regression gate | Tests catch 11/11 injected faults; 3 local models compared with confidence intervals |
-| [caos-cerebro](https://gitlab.com/braynerssj26/caos-cerebro) | Knowledge base with hybrid search behind MCP and FastAPI | 89 % top-1 and 99 % top-3 on 188 questions |
-| [crypto-bot](https://gitlab.com/braynerssj26/crypto-bot) | QA of a trading bot | 177 pytest tests, 83 % coverage, 15 bug reports |
+| [caos-agent-harness](https://gitlab.com/braynerssj26/caos-agent-harness) | A task board and policy layer for running AI agents you can check: review queue, tool guard, model router and one trace for every step | 400+ tests · 26/26 injected faults caught |
+| [agent-mcp-harness](https://gitlab.com/braynerssj26/agent-mcp-harness) | An unattended agent over MCP with a tool guard, budgets and citations checked against tool output | 8/20 vs 18/20 against plain retrieval |
+| [ai-validation-harness](https://gitlab.com/braynerssj26/ai-validation-harness) | A validation bench: golden data, retries, review queue and a regression gate | 11/11 injected faults caught |
+| [caos-cerebro](https://gitlab.com/braynerssj26/caos-cerebro) | A knowledge base with hybrid search behind MCP and FastAPI | 89 % top-1 · 99 % top-3 on 188 questions |
+| [Caos CryptoQA](https://gitlab.com/braynerssj26/crypto-bot) | A QA case study on an async Solana data and execution pipeline | 177 tests · 83 % coverage · 15 bug reports |
 
 Python · pytest · FastAPI · MCP · LangGraph · n8n · Ollama · Docker · GitLab CI
 
-The code lives on GitLab (the links above); this GitHub account mirrors the profile. Every project above is my own, runs with test data, and states its scope in the README.
-[LinkedIn](https://linkedin.com/in/brayner-jaime) · braynerssj26@gmail.com
+braynerssj26@gmail.com · [LinkedIn](https://linkedin.com/in/brayner-jaime) · Colombia, remote
